@@ -71,11 +71,21 @@ if ticker:
         
         # --- Punto 4: Cálculo de Rendimientos (CAGR) ---
         st.header("🧮 Rendimientos Anualizados (CAGR)")
-        st.markdown("""
+        st.markdown(r"""
         **Fórmula del CAGR (Compound Annual Growth Rate):**  
-        ```math
-        CAGR = \left(\\frac{Precio\\ Final}{Precio\\ Inicial}\\right)^{\\frac{1}{Años}} - 1
-        ```
+        Cuando hay datos para el período completo, el CAGR se calcula como:
+        $$ 
+        CAGR = \left( \frac{\text{Precio Final}}{\text{Precio Inicial}} \right)^{\frac{1}{\text{Años}}}
+        $$
+        Donde:
+        - $\text{Precio Final}$ = Último precio de cierre  
+
+        - $\text{Precio Inicial}$ = Primer precio de cierre  
+
+        - $\text{Años}$ = Período de tiempo en años
+
+
+        
         """)
         
         def calculate_cagr(start_price, end_price, years):
